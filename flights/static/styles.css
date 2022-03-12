@@ -1,0 +1,80 @@
+#mainh1 {
+       color: #E0DDAA;
+       text-align: center;
+       font-size: 100px;
+       font-family: 'Roboto Condensed', sans-serif;
+}
+#maindiv {
+       width: 600px;
+       height: 400px;
+       padding: 20px;
+       margin: 100px auto;
+       box-shadow: 0px 0px 10px 2px grey;
+}
+
+#flightslistdiv {
+       width: 600px;
+       height: 400px;
+       padding: 20px;
+       box-shadow: 0px 0px 10px 2px grey;
+       align-self: center;
+       margin: 100px auto;
+}
+
+#seperateflightdiv {
+       width: 600px;
+       height: fit-content;
+       padding: 20px;
+       box-shadow: 0px 0px 10px 2px grey;
+       align-self: center;
+       margin: 100px auto;
+       display: grid;
+       grid-gap: 3px;
+       
+}
+
+li{
+       font-family: 'Roboto Condensed', sans-serif;
+       color: #FFE6AB;
+}
+
+#links {
+       color: #2FA4FF;
+       text-decoration: none;
+}
+
+
+body {
+       background-color: #42C2FF;
+}
+
+body {margin: 0;}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1f8bbd;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #5463FF;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}

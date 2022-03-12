@@ -1,0 +1,25 @@
+{% extends 'flights/base.html' %}
+{% block content %}
+
+       {% load static %}
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+
+<ul class="topnav">
+  <li><a class="active" href="{% url 'flights:flights' %}">Flights</a></li>
+  {% if request.user.is_authenticated %}
+       <li class="right"><a href="{% url 'logout' %}">Log Out</a></li>
+{% else %}
+       <li class="right"><a href="{% url 'login' %}">Log In</a></li>
+{% endif %}
+</ul>
+       <link rel="stylesheet" href="{% static 'styles.css' %}">
+       <style>@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&family=Teko:wght@300&display=swap');
+       </style>
+       <div id="maindiv">
+              <h1 id="mainh1">Welcome To Yussuf Airline!</h1>
+       </div>
+       
+
+{% endblock content %} 

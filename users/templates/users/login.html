@@ -1,0 +1,20 @@
+{% extends 'users/base.html' %}
+{% block content %}
+{% load static %}
+       <link rel="stylesheet" href="{% static 'styles.css' %}">
+       <div id="seperateflightdiv">
+       {% if message %}
+              <h1 id="mainh1" style="font-size: 30px; text-align: left;">{{message}}</h1>
+       {% else %}
+              <h1 id="mainh1" style="font-size: 30px; text-align: left;">Log In</h1>
+       {% endif %}
+              <form action="{% url 'login' %}" method="post">
+                     {% csrf_token %}
+                     <input type="text" name="username" placeholder="Username">
+                     <input type="password" name="password" placeholder="Password">
+                     <input type="submit" value="Login">
+              </form>
+              <a href="{% url 'flights:index' %}" style="text-decoration: none;"><h1 id="mainh1" style="font-size: 20px; text-align: right; color: #5463FF;">Main Page</h1></a>
+       </div>
+       
+{% endblock content %}

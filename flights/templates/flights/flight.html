@@ -1,0 +1,38 @@
+{% extends "flights/base.html" %}
+{% block content %}
+{% load static %}
+       <link rel="stylesheet" href="{% static 'styles.css' %}">
+       <div id="seperateflightdiv">
+       <h1 id="mainh1">Flight: {{flight.id}}</h1>
+
+       <ul>
+              <li>Origin: {{flight.origin}}</li>
+              <li>Destionation: {{flight.destination}}</li>
+              <li>Duration: {{flight.duration}}</li>
+       </ul>
+
+       <h1 id="mainh1" style="font-size: 30px;">Passengers:</h1>
+              <ul>
+                     {% for passenger in passengers %}
+                            <li>{{passenger}}</li>
+                     {% empty %}
+                            <li>No Passengers</li>
+                     {% endfor %}
+              </ul>
+       </div>
+
+       <div id="seperateflightdiv">
+              <h1 id="mainh1" style="font-size: 30px;">Add Passengers:</h1>
+              <form action="{% url 'flights:book' flight.id %}" method="post">
+                     {% csrf_token %}
+                     <select name="passenger" >
+                            {% for passenger in non_passengers %}
+                            <option value="{{passenger.id}}">{{passenger}}</option>
+                            {% endfor %}
+                     </select>
+                     <input type="submit">
+
+              </form>
+              <a href="{% url 'flights:flights' %}" style="text-decoration: none;"><h1 id="mainh1" style="font-size: 20px; text-align: right; color: #5463FF;">Back To All Flights</h1></a>
+       </div>
+{% endblock content %}
