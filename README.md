@@ -2,3 +2,5 @@ Simple Web Application for an Airline that have the functions to add certain fli
 The Web Application has the ability to log in and log out users.
 
 ###  The Web App Has Been Created Using Django FrameWork as well as some HTML, CSS, Javascript.
+
+![Alt text](C:\Users\yusuf\OneDrive\Desktop/airlineindex.jpg?raw=true "Main Page")
